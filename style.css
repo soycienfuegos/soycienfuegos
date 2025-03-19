@@ -19,6 +19,7 @@
     background-color: #fff;
     color: #333;
     line-height: 1.5;
+    font-size: 18px;
   }
   
   /* Links genéricos */
@@ -45,7 +46,7 @@
   
   /* Botón genérico */
   .btn-conversation {
-    background-color: #1995ee;
+    background-color: orange;
     color: #0a0a0a;
     padding: 0.8rem 1.5rem;
     border: none;
@@ -69,12 +70,14 @@
   }
   .header-container {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto auto auto;
     align-items: center;
+    justify-content: space-around;
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
     gap: 1rem;
+  
   }
   
   /* Logo */
@@ -185,8 +188,12 @@
   .intro-section {
     max-width: 600px;
     margin: 2rem auto;
-    padding: 0 1rem;
+    padding: 1rem;
     text-align: center;
+    text-transform: uppercase;
+    color: orange;
+    font-weight: bold;
+    font-size: 1.4rem;
   }
   
   /* =========================
@@ -202,6 +209,7 @@
     font-size: 0.9rem;
     color: #666;
     margin-bottom: 0.5rem;
+    padding-top: 15px;
   }
   .big-heading {
     font-size: 2rem;
@@ -212,13 +220,22 @@
      7. FOOTER
   ========================= */
   .site-footer {
-    border-top: 1px solid #eee;
+    /* border-top: 1px solid #eee;
     padding: 2rem 1rem;
-    text-align: center;
-  }
-  .footer-content {
+    text-align: center; */
+    border-top:1px solid rgb(178, 177, 176);
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-around;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 1rem;
+    gap: 1rem;
+    
+  }
+  .footer-content {
+    max-width: 50%;
     font-size: 0.85rem;
     color: #666;
   }
@@ -255,7 +272,9 @@
   grid-column: 1 / span 2; /* ocupar 2 columnas */
   grid-row: 1 / 2;         /* fila 1 */
   background-color: #ff9900; /* Naranja */
-  background-image:url(/img/Oficina\ vacía\ 3.jpg);
+  background-image:url(/img/multitud-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* El segundo bloque (azul) va en la segunda fila, primera columna */
@@ -263,7 +282,9 @@
   grid-column: 1 / 2; /* ocupar la 1ª columna */
   grid-row: 2 / 3;    /* segunda fila */
   background-color: #00aaff; /* Azul */
-  background-image:url(/img/Oficina\ vacía\ 3.jpg);
+  background-image:url(/img/BYN-Chatbot.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* El tercer bloque (gris) va en la segunda fila, segunda columna */
@@ -271,7 +292,9 @@
   grid-column: 2 / 3; /* ocupar la 2ª columna */
   grid-row: 2 / 3;    /* segunda fila */
   background-color: #f2f2f2; /* Gris claro */
-  background-image:url(/img/Oficina\ vacía\ 3.jpg);
+  background-image:url(/img/project-bolsillo-lleno.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Título y descripción */
@@ -280,7 +303,7 @@
   margin-bottom: 0.5rem;
 }
 .project-block p {
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 
 /* Tecnología (esquina sup derecha) */
@@ -288,10 +311,12 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  font-size: 1.6rem;
   font-weight: bold;
+  text-align: center;
   text-transform: uppercase;
   color: #469dc8;
+  background-color: #070707;
+  padding: 5px;
 }
 
 /* ============= 
@@ -335,6 +360,7 @@
     }
     .menu-toggle {
       display: block;
+
     }
   
     /* hero-grid -> 1 columna */
