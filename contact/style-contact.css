@@ -41,6 +41,9 @@
   ========================= */
   .site-header {
     border-bottom: 1px solid #eee;
+    background-color: #eee;
+    position: sticky;
+    top: 0;
   }
   .header-container {
     display: grid;
@@ -51,7 +54,7 @@
     margin: 0 auto;
     padding: 1rem;
     gap: 1rem;
-  
+
   }
   
   /* Logo */
@@ -91,7 +94,7 @@
     }
     .small-subtitle2 {
       font-size: 1.3REM;
-      color: #259ce6;
+      color: #259ce65d;
       margin-bottom: 0.5rem;
       padding-top: 15px;
       padding-bottom: 15px;
@@ -102,7 +105,7 @@
       font-size: x-large;
       font-weight: 800;
       line-height: 2.6rem;
-
+      color: rgb(253, 249, 249);
     }
     
     .contact-container {
@@ -113,15 +116,185 @@
       max-width: 600px;
       margin: 0 auto;
       margin-top: 35px;
-      border: dashed 1px white;
+      border: dashed 1px #eabc50;;
       border-width: 10px 4px;
       border-radius: 10px 40px;
+      color: white;
     }
       .contact-hover {
         padding: 15px;
-        border-right: dashed 1px white;
+        border-right: dashed 1px #eabc50;
         border-width: 10px 4px;
         border-radius: 10px 40px;
 
       }
+/* SECCION SLIDER */
+.slider {
+  width:100%;
+  height: 70vh;
+  overflow: hidden;
+}
+.slides {
+  width: 700%;
+  height: 100%;
+  display: flex;
+}
+.slides input {
+  display: none;
+}
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+.slide img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.navigation-manual {
+  position: absolute;
+  width: 90%;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+.manual-btn {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+.manual-btn:hover {
+  background: #fff;
+}
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+/* Responsive */
+@media only screen and (max-width: 748px) {
+      .slider {
+          width: 90%;
+          height: 50vh;
+          overflow: hidden;
+      }
+}
+@media only screen and (max-width: 540px) {
+      .slider {
+          width: 90%;
+          height: 30vh;
+          overflow: hidden;
+      }
+}
 
+/* Sección de contacto */
+#contact-form {
+  width: 100%;
+  height: 50vh;
+  padding: 50px;
+}
+
+  .container {
+    width: 100%;
+    height: 30vh;
+    padding: 5rem;
+    padding-bottom: 5rem;
+    margin: 0 auto;
+
+  }
+  #h1 {
+
+    text-align: center;
+
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+/* Sección de logotipos */
+#stack-contenedor {
+  padding: 20px 0;
+  position: relative;
+}
+  .container-logos {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  grid-template-columns: repeat(2,minmax(0, 1fr));
+  gap: 50px;
+  padding-top: 1.4rem;
+  background-color: rgb(23, 23, 23);
+  width: 100%;
+  height: 30vh;
+  position: absolute;
+  justify-content: space-around;
+  align-content: center;
+  z-index: 50;
+  }
+  .CTA {
+    position: absolute;
+    z-index: 100;
+    font-size: 1.3REM;
+    color: #eabc50;
+    margin-bottom: 0.5rem;
+    padding: 15px;
+
+    font-weight: 600;
+    background-color: #333;
+
+
+  }
+  .logo {
+    width: 20vh;
+    height: 25vh;
+    background-image: url(/assets/Logo_blanco_vertical_slogan_BS.png);
+    background-size: cover;
+  }
+
+/* =========================
+   FOOTER
+  ========================= */
+  .site-footer {
+    /* border-top: 1px solid #eee;
+    padding: 2rem 1rem;
+    text-align: center; */
+
+    border-top:1px solid rgb(178, 177, 176);
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-around;
+   width: 100%;
+   height: auto;
+    padding-top: 200px;
+    gap: 1rem;
+    background-color: #eee;
+  }
+  .footer-content {
+    font-size: 0.85rem;
+    color: #666;
+  }
+    .footer-content-1 {
+      padding: 30px;
+
+    }
+    .footer-content-2 {
+      padding: 30px;
+
+    }
