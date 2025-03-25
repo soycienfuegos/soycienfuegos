@@ -17,7 +17,7 @@
   body {
     font-family: Arial, sans-serif;
     background-color: #fff;
-    color: #333;
+    color: #111;
     line-height: 1.5;
     font-size: 18px;
   }
@@ -30,6 +30,20 @@
   a:hover {
     opacity: 0.8;
   }
+
+  a:focus,
+button:focus,
+input:focus {
+  outline: 3px solid #f90; /* Borde llamativo */
+  outline-offset: 3px;     /* Separación del borde */
+  background-color: #fff8e1; /* Opcional: fondo diferente */
+  }
+  button:focus-visible,
+a:focus-visible {
+  outline: 3px dashed #f90;
+  }
+
+
   
   /* Títulos genéricos */
   h1, h2, h3, h4 {
@@ -82,7 +96,7 @@
   
   /* Logo */
   .site-logo img {
-    max-width: 100px; /* Ajusta según tu diseño */
+    max-width: 150px; /* Ajusta según tu diseño */
   }
   
   /* Navegación principal (versión escritorio) */
@@ -106,6 +120,7 @@
     font-size: 1rem;
     cursor: pointer;
   }
+  
   
   /* =========================
      4. HERO SECTION
@@ -191,10 +206,23 @@
     padding: 1rem;
     text-align: center;
     text-transform: uppercase;
-    color: orange;
+    color: #00aaff;
     font-weight: bold;
     font-size: 1.4rem;
   }
+
+  /* SECCIÓN FRASES */
+  .frase-motivacional {
+    font-style: italic;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    color: #444;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
   
   /* =========================
      6. VISIONS SECTION
@@ -225,15 +253,29 @@
     text-align: center; */
     border-top:1px solid rgb(178, 177, 176);
     display: grid;
-    grid-template-columns: auto auto;
-    align-items: center;
-    justify-content: space-around;
+    grid-template-columns: 10rem auto auto;
+    align-items: start;
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
     gap: 1rem;
-    
   }
+    #footer-logo {
+
+      max-width: 200px;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.5rem;
+    }
+
+    .footer-logo{
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.5rem;
+    }
+
   .footer-content {
     max-width: 50%;
     font-size: 0.85rem;
@@ -264,7 +306,15 @@
   /* Ajusta color de texto, tipografía, etc. a tu estilo */
   color: #f8f4f4;
   font-family: sans-serif;
+  
 }
+.project-block:hover,
+.project-block:focus {
+  background-color: #ffffff;
+  color: #111;
+  border: 2px solid #ccc; /* Contorno suave para dar más definición */
+}
+
 
 /* Asignamos las áreas en la grid */
 /* El primer bloque (naranja) abarca la 1ª fila (2 columnas) */
@@ -276,6 +326,23 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.project-block {
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Efecto al pasar el ratón */
+.project-block:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+}
+
 
 /* El segundo bloque (azul) va en la segunda fila, primera columna */
 .project-2 {
@@ -301,6 +368,7 @@
 .project-block h2 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  color: #fff;
 }
 .project-block p {
   font-size: 1.6rem;
